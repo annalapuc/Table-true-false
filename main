@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter the number: ");
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        boolean[][] a;
+        a = new boolean[n+1][n+1];
+
+
+        for (int i =1; i < n+1; i++) {
+            for (int j = 1; j < n+1; j++) {
+                if ((n % i == 0) && (n % j == 0)) {
+                    a[i][j] = true;
+                    System.out.print('+');
+                }
+                else {
+                    a[i][j] = false;
+                    System.out.print('.');
+                }
+            }System.out.println();
+
+        }
+
+
+    }
+}
+
+
+
